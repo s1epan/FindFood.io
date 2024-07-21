@@ -3,10 +3,17 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./dropMenu.module.css";
 import cn from "classnames";
+import { useEffect } from "react";
 
-const DropMenu = ({ togleTheme }) => {
+const DropMenu = ({ togleTheme, categor }) => {
   const [menu, setMenu] = useState("dropmenu-close");
   const [categories, setCategories] = useState("dropmenu-categories-close");
+  const [dropInfo, setDropInfo] = useState("drop-info-close");
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(categor);
+  });
 
   function dropMenuOver() {
     if (menu === "dropmenu-close") {
@@ -21,6 +28,14 @@ const DropMenu = ({ togleTheme }) => {
       setCategories("dropmenu-categories-open");
     } else {
       setCategories("dropmenu-categories-close");
+    }
+  }
+
+  function infoOver() {
+    if (dropInfo === "drop-info-close") {
+      setDropInfo("drop-info-open");
+    } else {
+      setDropInfo("drop-info-close");
     }
   }
 
@@ -46,6 +61,10 @@ const DropMenu = ({ togleTheme }) => {
 
   function categoriesMove() {
     setCategories("dropmenu-categories-open");
+  }
+
+  function infoMove() {
+    setDropInfo("drop-info-open");
   }
 
   return (
@@ -99,8 +118,8 @@ const DropMenu = ({ togleTheme }) => {
             )}
           >
             <img className="icon" src="./menu-white.png" alt="" />
+            <div>Categories</div>
             <div onMouseOver={categoriesOver}>
-              Categories
               <div
                 className={
                   style[
@@ -112,7 +131,28 @@ const DropMenu = ({ togleTheme }) => {
                   ]
                 }
               >
-                Categories
+                <div>
+                  <wrap className={style["underline"]}>Categories</wrap>
+                  <ul className={style["categories"]}>
+                    {data.map((el) => (
+                      <li>
+                        {el.strCategory}
+                        <img src={el.strCategoryThumb} />
+                      </li>
+                    ))}
+                  </ul>
+                  {/* <div
+                    className={
+                      style[
+                        `${
+                          dropInfo === "drop-info-close"
+                            ? "drop-info-open"
+                            : "drop-info-close"
+                        }`
+                      ]
+                    }
+                  ></div> */}
+                </div>
               </div>
             </div>
           </div>

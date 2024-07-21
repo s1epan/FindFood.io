@@ -5,9 +5,23 @@ import Search from "../Search/Search";
 import Exit from "../Exit/Exit";
 import { useState } from "react";
 import DropMenu from "../DropmMenu/DropMenu";
+import { useEffect } from "react";
 
-const Header = () => {
+const Header = (props) => {
   const [togleTheme, setTogleTheme] = useState("header-toggle-left");
+  const [data, setData] = useState([]);
+  // const [loaded, setLoaded] = useState(true);
+
+  // useEffect(() => {
+  //   if (loaded) return;
+  //   //получение data
+  //   setData(props.categories.map((el) => el.strCategory));
+  //   setLoaded(true);
+  // }, [loaded]);
+
+  useEffect(() => {
+    setData(props.categories);
+  });
 
   function toggleTheme() {
     if (togleTheme === "header-toggle-left") {
@@ -25,7 +39,7 @@ const Header = () => {
         ]
       }
     >
-      <DropMenu togleTheme={togleTheme} />
+      <DropMenu togleTheme={togleTheme} categor={data} />
       <div className={style["header-icon-elements"]}>
         <img src="./icon.png" />
         <h1 className={style["header-icon-element-text"]}>FindFood</h1>

@@ -2,15 +2,25 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./dropMenu.module.css";
+import cn from "classnames";
 
 const DropMenu = ({ togleTheme }) => {
   const [menu, setMenu] = useState("dropmenu-close");
+  const [categories, setCategories] = useState("dropmenu-categories-close");
 
   function dropMenuOver() {
     if (menu === "dropmenu-close") {
       setMenu("dropmenu-open");
     } else {
       setMenu("dropmenu-close");
+    }
+  }
+
+  function categoriesOver() {
+    if (categories === "dropmenu-categories-close") {
+      setCategories("dropmenu-categories-open");
+    } else {
+      setCategories("dropmenu-categories-close");
     }
   }
 
@@ -22,8 +32,20 @@ const DropMenu = ({ togleTheme }) => {
     }
   }
 
+  function categoriesOut() {
+    if (categories === "dropmenu-categories-open") {
+      setCategories("dropmenu-categories-close");
+    } else {
+      setCategories("dropmenu-categories-open");
+    }
+  }
+
   function dropMenuMove() {
     setMenu("dropmenu-open");
+  }
+
+  function categoriesMove() {
+    setCategories("dropmenu-categories-open");
   }
 
   return (
@@ -56,15 +78,17 @@ const DropMenu = ({ togleTheme }) => {
                 }`
               ]
             }
-            to={"/cart"}
+            to={"/content/cart"}
           >
             <div>
               <img className="icon" src="./cart-white.png" alt="" />
             </div>
             Cart
           </Link>
-          <Link
-            className={
+          <div
+            onMouseMove={categoriesMove}
+            onMouseOut={categoriesOver}
+            className={cn(
               style[
                 `${
                   togleTheme === "header-toggle-right"
@@ -72,12 +96,26 @@ const DropMenu = ({ togleTheme }) => {
                     : "header-link-dark"
                 }`
               ]
-            }
-            to={"/cart"}
+            )}
           >
             <img className="icon" src="./menu-white.png" alt="" />
-            Categories
-          </Link>
+            <div onMouseOver={categoriesOver}>
+              Categories
+              <div
+                className={
+                  style[
+                    `${
+                      categories === "dropmenu-categories-close"
+                        ? "dropmenu-categories-close"
+                        : "dropmenu-categories-open"
+                    }`
+                  ]
+                }
+              >
+                Categories
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

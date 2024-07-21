@@ -85,3 +85,31 @@
    align-items: flex-start;
    flex-direction: column;
 }
+
+.dropmenu-categories-close {
+   width: 200px;
+   height: 550px;
+
+   border: 1px solid black;
+   background-color: #333;
+
+   display: none;
+}
+
+.dropmenu-categories-open {
+   position: fixed;
+   top: 0;
+   left: 0;
+
+   width: 200px;
+   height: 550px;
+
+   border: 1px solid black;
+   background-color: #333;
+
+   color: white;
+
+   border-bottom-right-radius: 25px;
+
+   animation: open .5s ease-in-out;
+}

@@ -1,0 +1,14 @@
+.content-open {
+   animation: open 1s ease-in-out;
+   width: 100vw;
+   height: 100vh;
+}
+
+@keyframes open {
+   0% {
+      background: black;
+   }
+   100% {
+      background: transparent;
+   }
+}

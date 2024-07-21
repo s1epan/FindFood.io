@@ -1,0 +1,55 @@
+.join-bcg {
+   width: 100vw;
+   height: 100vh;
+
+   background: #333;
+}
+
+.join-text {
+   font-size: 50px;
+   color: white;
+   font-weight: 600;
+
+   position: absolute;
+   left: 50%;
+   top: 30%;
+   transform: translate(-50%, 0);
+
+   font-family:  "Edu AU VIC WA NT Hand", cursive;
+}
+
+.join {
+   width: 175px;
+   height: 90px;
+
+   border-radius: 25px;
+   background-color: darkorange;
+
+   position: absolute;
+   left: 50%;
+   top: 50%;
+
+   transform: translate(-50%, -50%);
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   color: white;
+   font-weight: 600;
+   font-size: 35px;
+
+   box-shadow: 5px 5px 25px black;
+
+   cursor: pointer;
+
+   transition: all .5s;
+
+   text-decoration: none;
+
+   font-family: "Poppins", sans-serif;
+}
+
+.join:hover {
+   background-color: rgb(185, 102, 0);
+}

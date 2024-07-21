@@ -1,0 +1,19 @@
+.search {
+   border: none;
+   border-bottom: 1px solid black;
+
+   background: transparent;
+}
+
+.search-dark {
+   border: none;
+   border-bottom: 1px solid rgb(255, 255, 255);
+
+   background: transparent;
+
+   color: white;
+}
+
+input:focus {
+  outline: none;
+}

@@ -1,0 +1,32 @@
+.exit {
+   width: 35px;
+   height: 35px;
+
+   background-color: darkred;
+
+   border-radius: 50%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   color: white;
+   font-weight: 600;
+   font-size: 20px;
+
+   margin-right: 20px;
+
+   transition: all .5s;
+}
+
+.exit:hover {
+   background-color: rgb(109, 0, 0);
+}
+
+.exit-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   
+}

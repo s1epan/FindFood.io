@@ -1,0 +1,149 @@
+.header {
+   height: 60px;
+   width: 100vw;
+
+   border-bottom: 1px solid black;
+
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   font-family: 'Poppins';
+}
+
+.header-dark {
+   height: 60px;
+   width: 100vw;
+
+   background-color: rgb(34, 34, 34);
+   color: white;
+
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   font-family: 'Poppins';
+}
+
+.header-icon-elements {
+   display: flex;
+   align-items: center;
+
+   margin-left: 20px;
+}
+
+/* .header-icon-element-text {
+   font-family: 'Poppins';
+} */
+
+.header-link {
+   text-decoration: none;
+   color: black;
+
+   font-size: 25px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.header-link-dark {
+   text-decoration: none;
+   color: white;
+
+   font-size: 25px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.header-second-elements {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   gap: 30px;
+}
+
+.header-toggle {
+   width: 50px;
+   height: 24px;
+
+   border: 1px solid black;
+   background-color: #333;
+   border-radius: 25px;
+
+   position: relative;
+}
+
+.header-toggle-dark {
+   width: 50px;
+   height: 24px;
+
+   border: 1px solid black;
+   background-color: rgb(255, 255, 255);
+   border-radius: 25px;
+
+   position: relative;
+}
+
+.header-toggle-left {
+   position: absolute;
+   left: 2px;
+   top: 50%;
+   transform: translate(0, -50%);
+
+   width: 20px;
+   height: 20px;
+
+   background: url('./sun.png');
+   border-radius: 50%;
+
+   border: none;
+
+   animation: toggle-left .2s ease-in-out;
+}
+
+.header-toggle-right {
+   position: absolute;
+   left: 26px;
+   top: 50%;
+   transform: translate(0, -50%);
+
+   width: 20px;
+   height: 20px;
+
+   background: url('./moon.png');
+   border-radius: 50%;
+
+   border: none;
+
+   animation: toggle-right .2s ease-in-out;
+}
+
+@keyframes toggle-left {
+   0% {
+      left: 26px;
+   }
+   100% {
+      left: 2px;
+   }
+}
+
+@keyframes toggle-right {
+   0% {
+      left: 2px;
+   }
+   100% {
+      left: 26px;
+   }
+}

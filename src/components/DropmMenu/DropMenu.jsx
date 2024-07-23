@@ -5,11 +5,12 @@ import style from "./dropMenu.module.css";
 import cn from "classnames";
 import { useEffect } from "react";
 
-const DropMenu = ({ togleTheme, categor }) => {
+const DropMenu = ({ togleTheme, categor, func }) => {
   const [menu, setMenu] = useState("dropmenu-close");
   const [categories, setCategories] = useState("dropmenu-categories-close");
   const [dropInfo, setDropInfo] = useState("drop-info-close");
   const [data, setData] = useState([]);
+  const [handleStrCategories, setHandleStrCategories] = useState("Beef");
 
   useEffect(() => {
     setData(categor);
@@ -65,6 +66,10 @@ const DropMenu = ({ togleTheme, categor }) => {
 
   function infoMove() {
     setDropInfo("drop-info-open");
+  }
+
+  function handleCatefories() {
+    func(handleStrCategories);
   }
 
   return (
@@ -135,7 +140,13 @@ const DropMenu = ({ togleTheme, categor }) => {
                   <wrap className={style["underline"]}>Categories</wrap>
                   <ul className={style["categories"]}>
                     {data.map((el) => (
-                      <li>
+                      <li
+                        key={el.idCategory}
+                        onClick={() => {
+                          setHandleStrCategories(el.strCategory);
+                          handleCatefories();
+                        }}
+                      >
                         {el.strCategory}
                         <img src={el.strCategoryThumb} />
                       </li>

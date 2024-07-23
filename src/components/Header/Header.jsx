@@ -21,15 +21,16 @@ const Header = (props) => {
 
   useEffect(() => {
     setData(props.categories);
+    setTogleTheme(props.togleTheme);
   });
 
-  function toggleTheme() {
-    if (togleTheme === "header-toggle-left") {
-      setTogleTheme("header-toggle-right");
-    } else {
-      setTogleTheme("header-toggle-left");
-    }
-  }
+  // function toggleTheme() {
+  //   if (togleTheme === "header-toggle-left") {
+  //     setTogleTheme("header-toggle-right");
+  //   } else {
+  //     setTogleTheme("header-toggle-left");
+  //   }
+  // }
 
   return (
     <div
@@ -39,7 +40,7 @@ const Header = (props) => {
         ]
       }
     >
-      <DropMenu togleTheme={togleTheme} categor={data} />
+      <DropMenu togleTheme={togleTheme} categor={data} func={props.func} />
       <div className={style["header-icon-elements"]}>
         <img src="./icon.png" />
         <h1 className={style["header-icon-element-text"]}>FindFood</h1>
@@ -47,30 +48,6 @@ const Header = (props) => {
       <div className={style["header-second-elements"]}>
         <div className={style["header-search"]}>
           <Search theme={togleTheme} />
-        </div>
-        <div
-          className={
-            style[
-              `${
-                togleTheme === "header-toggle-right"
-                  ? "header-toggle"
-                  : "header-toggle-dark"
-              }`
-            ]
-          }
-        >
-          <button
-            onClick={toggleTheme}
-            className={
-              style[
-                `${
-                  togleTheme === "header-toggle-left"
-                    ? "header-toggle-right"
-                    : "header-toggle-left"
-                }`
-              ]
-            }
-          ></button>
         </div>
       </div>
       <Exit />

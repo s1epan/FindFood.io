@@ -1,0 +1,77 @@
+.header-toggle {
+   width: 50px;
+   height: 24px;
+
+   border: 1px solid black;
+   background-color: #333;
+   border-radius: 25px;
+
+   position: fixed;
+   top: 17px;
+   left: 90%;
+}
+
+.header-toggle-dark {
+   width: 50px;
+   height: 24px;
+
+   border: 1px solid black;
+   background-color: rgb(255, 255, 255);
+   border-radius: 25px;
+
+   position: fixed;
+   top: 17px;
+   left: 90%;
+}
+
+.header-toggle-left {
+   position: absolute;
+   left: 2px;
+   top: 50%;
+   transform: translate(0, -50%);
+
+   width: 20px;
+   height: 20px;
+
+   background: url('./sun.png');
+   border-radius: 50%;
+
+   border: none;
+
+   animation: toggle-left .2s ease-in-out;
+}
+
+.header-toggle-right {
+   position: absolute;
+   left: 26px;
+   top: 50%;
+   transform: translate(0, -50%);
+
+   width: 20px;
+   height: 20px;
+
+   background: url('./moon.png');
+   border-radius: 50%;
+
+   border: none;
+
+   animation: toggle-right .2s ease-in-out;
+}
+
+@keyframes toggle-left {
+   0% {
+      left: 26px;
+   }
+   100% {
+      left: 2px;
+   }
+}
+
+@keyframes toggle-right {
+   0% {
+      left: 2px;
+   }
+   100% {
+      left: 26px;
+   }
+}

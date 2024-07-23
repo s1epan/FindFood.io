@@ -12,3 +12,164 @@
       background: transparent;
    }
 }
+
+.content {
+   width: 100vw;
+   height: 100vh;
+
+   /* overflow-y: hidden; */
+}
+
+.content-dark {
+   width: 100vw;
+   height: 100vh;
+
+   background-color: #333;
+
+   /* overflow-y: hidden; */
+}
+
+.content-meals {
+   display: grid;
+   grid-template-columns: 270px 270px 270px 270px;
+   justify-content: center;
+   align-items: center;
+   gap: 100px;
+
+   margin: 100px 0;
+
+   color: black;
+
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.content-meals-dark {
+   display: grid;
+   grid-template-columns: 270px 270px 270px 270px;
+   justify-content: center;
+   align-items: center;
+   gap: 100px;
+
+   margin: 100px 0;
+
+   color: white;
+
+   font-size: 20px;
+   font-weight: 600;
+
+   
+}
+
+.content-meals-img {
+   border-radius: 50%;
+
+   transition: all .2s;
+
+   width: 220px;
+
+   border: 5px solid orange;
+}
+
+.content-meals-img:hover {
+   /* border: 1px solid white; */
+   box-shadow: 0 0 24px orange;
+}
+
+.content-meals-img-dark {
+   border-radius: 50%;
+
+   transition: all .2s;
+
+   width: 220px;
+
+   border: 5px solid orange;
+}
+
+.content-meals-img-dark:hover {
+   /* border: 1px solid white; */
+   box-shadow: 0 0 24px white;
+}
+
+.content-element-meals {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   flex-direction: column;
+
+   height: 300px;
+
+   font-size: 20px;
+
+   /* border: 1px solid black; */
+   /* border-radius: 25px; */
+}
+
+.content-meals-price {
+   display: flex;
+   align-items: center;
+   gap: 90px;
+
+   overflow-y: hidden;
+
+}
+
+.content-meals-price-choose {
+   padding: 5px 10px;
+   background-color: orange;
+
+   border: none;
+   border-radius: 50%;
+
+   transition: all .5s;
+
+   height: 45px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   cursor: pointer;
+}
+
+.content-meals-price-choose:hover {
+   background-color: darkorange;
+}
+
+.content-meals-second-price {
+   text-decoration: overline;
+   display: inline;
+}
+
+.content-meals-third-price {
+   text-decoration: line-through;
+   display: inline;
+}
+
+.content-meals-red-price {
+   color: red;
+   display: inline;
+
+   padding-right: 10px;
+}
+
+.nf {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.content-meals-sale-img {
+   width: 50px;
+   height: 25px;
+
+   background: darkred;
+   color: white;
+
+   font-size: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

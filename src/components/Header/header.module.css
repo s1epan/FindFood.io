@@ -2,7 +2,7 @@
    height: 60px;
    width: 100vw;
 
-   border-bottom: 1px solid black;
+   /* border-bottom: 1px solid black; */
 
    position: absolute;
    top: 0;
@@ -15,6 +15,8 @@
    font-family: 'Poppins';
 
    box-shadow: 0 0 30px black;
+
+   background-color: white;
 }
 
 .header-dark {

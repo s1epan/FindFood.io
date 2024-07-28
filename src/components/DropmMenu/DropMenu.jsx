@@ -92,23 +92,7 @@ const DropMenu = ({ togleTheme, categor, func }) => {
         }
       >
         <div className={style["links-menu"]}>
-          <Link
-            className={
-              style[
-                `${
-                  togleTheme === "header-toggle-right"
-                    ? "header-link"
-                    : "header-link-dark"
-                }`
-              ]
-            }
-            to={"/content/cart"}
-          >
-            <div>
-              <img className="icon" src="./cart-white.png" alt="" />
-            </div>
-            Cart
-          </Link>
+          {/* ABOUT LINK HERE====================================================================== */}
           <div
             onMouseMove={categoriesMove}
             onMouseOut={categoriesOver}

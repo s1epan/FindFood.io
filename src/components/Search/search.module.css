@@ -17,3 +17,10 @@
 input:focus {
   outline: none;
 }
+
+.search-btn {
+   background: transparent;
+   border: none;
+
+   cursor: pointer;
+}

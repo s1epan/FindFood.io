@@ -10,6 +10,7 @@ import { useEffect } from "react";
 const Header = (props) => {
   const [togleTheme, setTogleTheme] = useState("header-toggle-left");
   const [data, setData] = useState([]);
+  const [countMeals, setCountMeals] = useState(0);
   // const [loaded, setLoaded] = useState(true);
 
   // useEffect(() => {
@@ -22,6 +23,7 @@ const Header = (props) => {
   useEffect(() => {
     setData(props.categories);
     setTogleTheme(props.togleTheme);
+    setCountMeals(props.count);
   });
 
   // function toggleTheme() {
@@ -41,13 +43,41 @@ const Header = (props) => {
       }
     >
       <DropMenu togleTheme={togleTheme} categor={data} func={props.func} />
+      <div className={style["header-counting-meals-cart"]}>
+        <Link
+          className={
+            style[
+              `${
+                togleTheme === "header-toggle-right"
+                  ? "header-link"
+                  : "header-link-dark"
+              }`
+            ]
+          }
+          to={"/content/cart"}
+        >
+          <div>
+            <img
+              className="icon"
+              src={`${
+                togleTheme === "header-toggle-left"
+                  ? "cart-white.png"
+                  : "cart.png"
+              }`}
+              alt=""
+            />
+          </div>
+        </Link>
+        {/* <img src="./cart-white.png" alt="" /> */}
+        {countMeals}
+      </div>
       <div className={style["header-icon-elements"]}>
         <img src="./icon.png" />
         <h1 className={style["header-icon-element-text"]}>FindFood</h1>
       </div>
       <div className={style["header-second-elements"]}>
         <div className={style["header-search"]}>
-          <Search theme={togleTheme} />
+          <Search theme={togleTheme} searchFunc={props.searchFunc} />
         </div>
       </div>
       <Exit />

@@ -153,3 +153,8 @@
       left: 26px;
    }
 }
+
+.header-counting-meals-cart {
+   display: flex;
+   align-items: center;
+}

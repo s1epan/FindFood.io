@@ -54,11 +54,11 @@ const Header = (props) => {
               }`
             ]
           }
-          to={"/content/cart"}
+          // to={"/content/cart"}
         >
           <div>
             <img
-              className="icon"
+              className={style["icon"]}
               src={`${
                 togleTheme === "header-toggle-left"
                   ? "cart-white.png"
@@ -72,7 +72,7 @@ const Header = (props) => {
         {countMeals}
       </div>
       <div className={style["header-icon-elements"]}>
-        <img src="./icon.png" />
+        <img className={style["header-main-icon"]} src="./icon.png" />
         <h1 className={style["header-icon-element-text"]}>FindFood</h1>
       </div>
       <div className={style["header-second-elements"]}>
@@ -80,7 +80,8 @@ const Header = (props) => {
           <Search theme={togleTheme} searchFunc={props.searchFunc} />
         </div>
       </div>
-      <Exit />
+      <div></div>
+      {/* <Exit /> */}
     </div>
   );
 };

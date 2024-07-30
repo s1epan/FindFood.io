@@ -32,12 +32,12 @@ const Content = () => {
   //   setCountMeals(countMeals + 1);
   // }
 
-  // function handleCountMeals() {
-  //   setCountMeals(countMeals + 1);
+  function handleCountMeals() {
+    setCountMeals(countMeals + 1);
 
-  //   let meal = document.getElementById('name-meal').innerText
-  //   if (meal === )
-  // }
+    // let meal = document.getElementById('name-meal').innerText
+    // if (meal === )
+  }
 
   function handleCategories(str) {
     axios({
@@ -169,6 +169,7 @@ const Content = () => {
                       </div>
                       <div>
                         <button
+                          onClick={handleCountMeals}
                           // onClick={() => {
                           //   setCountMeals(countMeals + 1);
 
@@ -198,8 +199,12 @@ const Content = () => {
               ))
             ) : (
               <div className={style["nf"]}>
-                <wrap>Something is wrong</wrap> <br />{" "}
-                <wrap>Choose categories or find meal with searchbar</wrap>
+                <div className={style["nf-first-element"]}>
+                  Something is wrong
+                </div>{" "}
+                <div className={style["nf-second-element"]}>
+                  Choose categories or find meal with searchbar
+                </div>
               </div>
             )}
           </div>

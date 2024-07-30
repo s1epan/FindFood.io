@@ -22,7 +22,7 @@ const Search = (props) => {
   }
 
   return (
-    <div>
+    <div className={styles["search"]}>
       <input
         className={
           styles[

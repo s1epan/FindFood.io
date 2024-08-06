@@ -9,7 +9,7 @@ import classNames from "classnames";
 
 const Content = () => {
   const [dataCategories, setDataCategories] = useState([]);
-  const [dataFilterCategories, setDataFilterCategories] = useState();
+  const [dataFilterCategories, setDataFilterCategories] = useState("beef");
   const [togleTheme, setTogleTheme] = useState("header-toggle-left");
   const [countMeals, setCountMeals] = useState(0);
   const [state, setState] = useState("");

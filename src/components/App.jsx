@@ -7,13 +7,14 @@ import Categories from "./Categories/Categories";
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route element={<Join />} path={"/"} />
-        <Route element={<Content />} path={"/content"} />
-        <Route element={<Cart />} path={"/content/cart"} />
-      </Routes>
-    </Suspense>
+    // <Suspense fallback={<div>Loading...</div>}>
+    //   <Routes>
+    //     <Route element={<Join />} path={"/"} />
+    //     <Route element={<Content />} path={"/content"} />
+    //     <Route element={<Cart />} path={"/content/cart"} />
+    //   </Routes>
+    // </Suspense>
+    <Content />
   );
 }
 

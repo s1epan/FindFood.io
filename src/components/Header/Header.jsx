@@ -44,7 +44,7 @@ const Header = (props) => {
     >
       <DropMenu togleTheme={togleTheme} categor={data} func={props.func} />
       <div className={style["header-counting-meals-cart"]}>
-        <Link
+        <a
           className={
             style[
               `${
@@ -67,7 +67,7 @@ const Header = (props) => {
               alt=""
             />
           </div>
-        </Link>
+        </a>
         {/* <img src="./cart-white.png" alt="" /> */}
         {countMeals}
       </div>

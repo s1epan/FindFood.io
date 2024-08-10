@@ -47,7 +47,7 @@ html {
     border: 1px solid black;
     background-color: #333;
     border-radius: 25px;
-    position: fixed;
+    position: absolute;
     top: 17px;
     right: 10px;
     padding-right: 5px;
@@ -58,7 +58,7 @@ html {
     height: 24px;
     border: 1px solid black;
     background-color: rgb(255, 255, 255);
-    position: fixed;
+    position: absolute;
     top: 17px;
     right: 5px;
     padding-right: 5px;
@@ -77,6 +77,34 @@ html {
 
 ._search_ro6i5_1 {
   border-bottom: 1px solid black;
+}
+
+._header-toggle-right_1hmpm_87 {
+    position: absolute;
+    left: 26px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 20px;
+    height: 20px;
+    background: url(./moon.png);
+    background-color: #333;
+    border-radius: 50%;
+    border: none;
+    animation: _toggle-right_1hmpm_1 .2s ease-in-out;
+}
+
+._header-toggle-left_1hmpm_53 {
+  position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 20px;
+    height: 20px;
+    background: url(./sun.png);
+    background-color: orange;
+    border-radius: 50%;
+    border: none;
+    animation: _toggle-left_1hmpm_1 .2s ease-in-out;
 }
 
 }

@@ -89,6 +89,7 @@
    border-radius: 25px;
 
    position: relative;
+   right: 5px;
 }
 
 .header-toggle-dark {
@@ -100,13 +101,14 @@
    border-radius: 25px;
 
    position: relative;
+   right: 5px;
 }
 
 .header-toggle-left {
-   position: absolute;
+   /* position: absolute;
    left: 2px;
    top: 50%;
-   transform: translate(0, -50%);
+   transform: translate(0, -50%); */
 
    width: 20px;
    height: 20px;
@@ -120,10 +122,10 @@
 }
 
 .header-toggle-right {
-   position: absolute;
+   /* position: absolute;
    left: 26px;
    top: 50%;
-   transform: translate(0, -50%);
+   transform: translate(0, -50%); */
 
    width: 20px;
    height: 20px;

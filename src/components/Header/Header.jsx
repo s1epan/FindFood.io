@@ -5,6 +5,8 @@ import Search from "../Search/Search";
 import Exit from "../Exit/Exit";
 import { useState } from "react";
 import DropMenu from "../DropmMenu/DropMenu";
+import Toggle from "../Toggle/Toggle";
+
 import { useEffect } from "react";
 
 const Header = (props) => {
@@ -73,7 +75,7 @@ const Header = (props) => {
       </div>
       <div className={style["header-icon-elements"]}>
         <img className={style["header-main-icon"]} src="./icon.png" />
-        <h1 className={style["header-icon-element-text"]}>FindFood</h1>
+        <div className={style["header-icon-element-text"]}>FindFood</div>
       </div>
       <div className={style["header-second-elements"]}>
         <div className={style["header-search"]}>
@@ -82,6 +84,7 @@ const Header = (props) => {
       </div>
       <div></div>
       {/* <Exit /> */}
+      <Toggle />
     </div>
   );
 };

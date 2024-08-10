@@ -53,6 +53,10 @@ html {
     padding-right: 5px;
 }
 
+._header-icon-elements_717b3_83 {
+    font-size: 25px;
+  }
+
 ._header-toggle-dark_1hmpm_27 {
     width: 50px;
     height: 24px;
@@ -414,7 +418,9 @@ html {
     font-size: 10px;
   }
 
-  
+  ._header-dark_717b3_43 {
+    justify-content: flex-start;
+  }
 
   ._search-dark_ro6i5_15 {
     width: 90px;
